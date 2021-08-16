@@ -16,4 +16,4 @@ class Question
 end
 
 question1 = Question.new
-question1.plus
+puts question1.plus
