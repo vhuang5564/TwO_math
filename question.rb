@@ -9,10 +9,11 @@ class Question
   end
 
   def plus
-    return 1 + 1
+    puts "What is 1 + 1?"
+    answer = gets.chomp
   end
 
 end
 
 question1 = Question.new
-puts question1.plus
+question1.plus
