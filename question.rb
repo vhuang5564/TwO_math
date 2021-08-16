@@ -8,4 +8,11 @@ class Question
     @divide = divide
   end
 
+  def plus
+    return 1 + 1
+  end
+
 end
+
+question1 = Question.new
+puts question1.plus
