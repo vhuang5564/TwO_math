@@ -29,6 +29,7 @@ class Game
   def play
     while player1.score != 0 and player2.score != 0
       new_turn
+      puts "#{@players.first.name}'s turn"
       @players.first.question
       score      
 
@@ -42,7 +43,6 @@ class Game
 
       @players.rotate!
       sleep 0.5
-
     end
   end
 end
