@@ -1,5 +1,3 @@
-require_relative "./question"
-
 class Game
   attr_accessor :player1, :player2
 
@@ -13,6 +11,8 @@ class Game
     name2 = gets.chomp
     @player2 = Player.new(name2)
     puts "player2: " + @player2.name
+
+    @players = [@player1, @player2].shuffle
   end
 
   def new_turn
@@ -26,8 +26,20 @@ class Game
   end
 
   def play
-    new_turn
-    score
+    while player1.score != 0 and player2.score != 0
+      new_turn
+      @players.first.question
+      score
+
+      if player1.score == 0
+        puts "#{player2.name} is the winner!"
+      end
+
+      if player2.score == 0
+        puts "#{player1.name} is the winner!"
+      end
+
+    end
   end
 
 end
