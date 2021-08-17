@@ -31,7 +31,7 @@ class Game
       new_turn
       @players.first.question
       score      
-      
+
       if player1.score == 0
         puts "#{player2.name} is the winner!"
       end
@@ -44,5 +44,4 @@ class Game
 
     end
   end
-
 end
