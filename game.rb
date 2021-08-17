@@ -41,6 +41,7 @@ class Game
       end
 
       @players.rotate!
+      sleep 0.5
 
     end
   end
