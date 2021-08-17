@@ -1,5 +1,7 @@
+require_relative "./question"
+
 class Game
-  attr_accessor :player1
+  attr_accessor :player1, :player2
 
   def initialize
     print "Enter your name player 1: "
@@ -25,6 +27,8 @@ class Game
 
   def play
     new_turn
+    question = Question.new
+    question.plus
     score
   end
 
