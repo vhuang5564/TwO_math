@@ -54,6 +54,7 @@ class Question
     divide1 = rand(1..100)
     divide2 = rand(1..10)
 
+    ## runtime will be quicker if we used multiplication to find whole integers instead of while loop
     ## check if answer is a whole number if not randomize again
     while divide1 % divide2 != 0 
       divide1 = rand(1..100)

@@ -13,4 +13,19 @@ class Game
     puts "player2: " + @player2.name
   end
 
+  def new_turn
+    puts
+    puts "----- NEW TURN -----"
+    puts
+  end
+
+  def score
+    puts "#{@player1.name}: #{@player1.score}/3 vs #{@player2.name}: #{@player2.score}/3"
+  end
+
+  def play
+    new_turn
+    score
+  end
+
 end
