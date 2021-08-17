@@ -9,9 +9,17 @@ class Question
   end
 
   def plus
-    print "What is #{rand(1..10)} + #{rand(1..10)}? "
-    answer = gets.chomp
-    puts "Your answer is #{answer}"
+    add1 = rand(1..10)
+    add2 = rand(1..10)
+
+    print "What is #{add1} + #{add2}? "
+    answer = gets.chomp.to_i
+
+    if answer == add1 + add2
+      puts "Correct! the answer is #{answer}"
+    elsif answer != add1 + add2
+      puts "Incorrect! the answer is #{add1 + add2}"
+    end
   end
 
 end
