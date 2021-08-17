@@ -19,6 +19,7 @@ class Game
     puts
     puts "----- NEW TURN -----"
     puts
+    @players.rotate 
   end
 
   def score
@@ -29,8 +30,8 @@ class Game
     while player1.score != 0 and player2.score != 0
       new_turn
       @players.first.question
-      score
-
+      score      
+      
       if player1.score == 0
         puts "#{player2.name} is the winner!"
       end
@@ -38,6 +39,8 @@ class Game
       if player2.score == 0
         puts "#{player1.name} is the winner!"
       end
+
+      @players.rotate!
 
     end
   end
