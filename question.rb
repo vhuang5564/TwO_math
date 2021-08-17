@@ -22,6 +22,21 @@ class Question
     end
   end
 
+  def minus
+    minus1 = rand(1..10)
+    minus2 = rand(1..10)
+
+    print "What is #{minus1} - #{minus2}? "
+    answer = gets.chomp.to_i
+
+    if answer == minus1 - minus2
+      puts "Correct! the answer is #{answer}"
+    elsif answer != minus1 + minus2
+      puts "Incorrect! the answer is #{add1 + add2}"
+    end
+  end
+
+
 end
 
 question1 = Question.new
