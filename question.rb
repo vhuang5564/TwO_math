@@ -50,6 +50,19 @@ class Question
     end
   end
 
+  def divide
+    divide1 = rand(1..100)
+    divide2 = rand(1..10)
+
+    print "What is #{divide1} / #{divide2}? "
+    answer = gets.chomp.to_i
+
+    if answer == divide1 / divide2
+      puts "Correct! the answer is #{answer}"
+    elsif answer != divide1 * divide2
+      puts "Incorrect! the answer is #{divide1 / divide2}"
+    end
+  end
 end
 
 question1 = Question.new
