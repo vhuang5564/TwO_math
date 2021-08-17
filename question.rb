@@ -8,8 +8,10 @@ class Question
 
     if answer == add1 + add2
       puts "Correct! the answer is #{answer}"
+      return true
     elsif answer != add1 + add2
       puts "Incorrect! the answer is #{add1 + add2}"
+      return false
     end
   end
 
@@ -22,8 +24,10 @@ class Question
 
     if answer == minus1 - minus2
       puts "Correct! the answer is #{answer}"
+      return true
     elsif answer != minus1 + minus2
       puts "Incorrect! the answer is #{minus1 - minus2}"
+      return false
     end
   end
 
@@ -36,8 +40,10 @@ class Question
 
     if answer == times1 * times2
       puts "Correct! the answer is #{answer}"
+      return true
     elsif answer != times1 * times2
       puts "Incorrect! the answer is #{times1 * times2}"
+      return false
     end
   end
 
@@ -56,8 +62,10 @@ class Question
 
     if answer == divide1 / divide2
       puts "Correct! the answer is #{answer}"
+      return true
     elsif answer != divide1 * divide2
       puts "Incorrect! the answer is #{divide1 / divide2}"
+      return false
     end
   end
 end

@@ -27,8 +27,6 @@ class Game
 
   def play
     new_turn
-    question = Question.new
-    question.plus
     score
   end
 
