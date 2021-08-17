@@ -32,10 +32,23 @@ class Question
     if answer == minus1 - minus2
       puts "Correct! the answer is #{answer}"
     elsif answer != minus1 + minus2
-      puts "Incorrect! the answer is #{add1 + add2}"
+      puts "Incorrect! the answer is #{minus1 - minus2}"
     end
   end
 
+  def times
+    times1 = rand(1..10)
+    times2 = rand(1..10)
+
+    print "What is #{times1} * #{times2}? "
+    answer = gets.chomp.to_i
+
+    if answer == times1 * times2
+      puts "Correct! the answer is #{answer}"
+    elsif answer != times1 * times2
+      puts "Incorrect! the answer is #{times1 * times2}"
+    end
+  end
 
 end
 
