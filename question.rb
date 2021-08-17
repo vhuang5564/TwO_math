@@ -54,6 +54,11 @@ class Question
     divide1 = rand(1..100)
     divide2 = rand(1..10)
 
+    ## check if answer is a whole number if not randomize again
+    while divide1 % divide2 != 0 
+      divide1 = rand(1..100)
+    end
+
     print "What is #{divide1} / #{divide2}? "
     answer = gets.chomp.to_i
 
@@ -64,6 +69,4 @@ class Question
     end
   end
 end
-
-question1 = Question.new
 
