@@ -9,11 +9,12 @@ class Question
   end
 
   def plus
-    puts "What is 1 + 1?"
+    print "What is #{rand(1..10)} + #{rand(1..10)}? "
     answer = gets.chomp
+    puts "Your answer is #{answer}"
   end
 
 end
 
 question1 = Question.new
-puts question1.plus
+
